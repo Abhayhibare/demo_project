@@ -1,0 +1,158 @@
+/* CSS Reset and Variables */
+:root {
+  --primary: #E91E63;
+  --secondary: #FFA726;
+  --text: #333333;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.logo {
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+nav a.active {
+  color: var(--primary);
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 80px;
+  min-height: 100vh;
+  padding-top: 100px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+}
+
+.sidebar-pink {
+  background: var(--primary);
+}
+
+.sidebar-orange {
+  background: var(--secondary);
+}
+
+.sidebar a {
+  color: var(--white);
+  text-decoration: none;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  padding: 2rem 1.5rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar a.active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Main Content Styles */
+main {
+  min-height: 100vh;
+  padding: 100px 2rem 2rem;
+  transition: margin 0.3s ease;
+}
+
+/* Page Specific Main Content */
+.team-page main {
+  margin-left: 160px; /* For two left sidebars */
+  background: var(--white);
+}
+
+.details-page main {
+  margin-left: 80px;
+  margin-right: 80px;
+  background: var(--primary);
+  color: var(--white);
+}
+
+.contact-page main {
+  margin-right: 160px; /* For two right sidebars */
+  background: var(--secondary);
+  color: var(--white);
+}
+
+/* Footer Styles */
+footer {
+  background: #222;
+  color: var(--white);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer a {
+  color: var(--white);
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+      display: none;
+  }
+
+  main {
+      margin: 0 !important;
+  }
+
+  .mobile-toggle {
+      display: block !important;
+  }
+}

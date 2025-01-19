@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS Reset and Variables */
+        :root {
+            --primary: #E91E63;
+            --secondary: #FFA726;
+            --text: #333333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: grid;
+        }
+
+       
+       
+        /* Main Content */
+        main {
+            margin-left: 200px;
+            padding: 100px 2rem 2rem;
+            background: var(--primary);
+            min-height: 100vh;
+        }
+
+        .personal-details {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            background: var(--white);
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: #666;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+    </style>
+</head>
+<body class="details-page">
+    <header>
+        <a href="/" class="logo">LOGO</a>
+        <nav>
+            <ul>
+                <li><a href="p1.html" class="nav-link">OUR TEAM</a></li>
+                <li><a href="p2.html" class="nav-link active">PERSONAL DETAILS</a></li>
+                <li><a href="p3.html" class="nav-link">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Left pink sidebar -->
+    <aside class="sidebar sidebar-white" style="left: 0;">
+        <a href="p1.html" class="nav-link " style="color: #222;">Our Team</a>
+    </aside>
+
+    <!-- Right orange sidebar -->
+    <aside class="sidebar sidebar-orange" style="right: 0;">
+        <a href="p3.html" class="nav-link">Contact Us</a>
+    </aside>
+
+    <main>
+        <div class="personal-details">
+            <h1>Personal Details</h1>
+            <form id="personalForm">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        id="name" 
+                        placeholder="Enter Your Name"
+                        required
+                        aria-label="Enter Your Name"
+                    >
+                </div>
+                <div class="form-group">
+                    <input 
+                        type="tel" 
+                        id="mobile" 
+                        placeholder="Enter Your Mobile Number"
+                        required
+                        aria-label="Enter Your Mobile Number"
+                    >
+                </div>
+                <div class="form-group">
+                    <textarea 
+                        id="address" 
+                        placeholder="Enter Your Address"
+                        required
+                        aria-label="Enter Your Address"
+                    ></textarea>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
